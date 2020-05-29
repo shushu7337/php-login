@@ -6,7 +6,7 @@ include_once "../base.php";
     $chk=nums('user',['acc'=>$acc,'pw'=>$pw]);
 
     if($chk>=1){
-        $_SESSION['user']=$acc;
+
         to("../home.php");
     }else{
         to("../fail.php");
