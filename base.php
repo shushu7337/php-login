@@ -1,4 +1,4 @@
-<?php
+<?PHP
 $dsn="mysql:host=localhost;charset=utf8;dbname=member";
 $pdo=new PDO($dsn,'root',"");
 date_default_timezone_set("Asia/Taipei");
@@ -124,5 +124,27 @@ function save($table,$arg){
 //頁面導向
 function to ($url){
     header("location:".$url);
+}
+
+
+
+function chkacc($acc){
+
+    //小寫字母97,122
+    //大寫字母65,90
+    //數字48,57
+    $chk=true;
+    for($i=0;$i<strlen($acc);$i++){
+        $char=ord(mb_substr($acc,$i,1));
+        if(($char>=97 && $char<=122) || ($char>=65 && $char<=90) || ($char>=48 && $char<=57)){
+
+            
+         }else{
+
+            $chk=false;
+        }
+    }
+
+    return $chk;
 }
 ?>
