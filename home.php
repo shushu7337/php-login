@@ -1,7 +1,4 @@
-<?php
-include_once "../base.php";
 
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +7,6 @@ include_once "../base.php";
     <title>Welcome</title>
 </head>
 <body>
-    <h1>登入成功,歡迎<?=$_SESSION['user'];?></h1>
+    <h1>登入成功</h1>
 </body>
 </html>
